@@ -53,7 +53,7 @@ body.theme-dark {
   Apply your global font family and bind body colors to the CSS variables.
 */
 * {
-  font-family: Outfit; /* Ensure 'Outfit' is loaded via Next.js or @import url() */
+  font-family: Centra, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Ensure 'Outfit' is loaded via Next.js or @import url() */
 }
 
 body {
