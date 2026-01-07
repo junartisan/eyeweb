@@ -76,7 +76,7 @@ const Contact = () => {
             defaultValue=""
             className="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark: text-black"
         />
-
+        
         <button
             type="submit"
             aria-label='Submit Now'

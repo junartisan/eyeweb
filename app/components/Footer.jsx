@@ -33,8 +33,8 @@ const Footer = () => {
             <li><a target="_blank" href="https://www.linkedin.com/company/eyewebmaster">Linkedin</a></li>
             <li><a target="_blank" href="https://fb.com/eyewebmaster">Facebook</a></li>
             
-
         </ul>
+
       </div>
     </div>
   )
