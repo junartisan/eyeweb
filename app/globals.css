@@ -47,8 +47,8 @@ body.theme-dark {
   --custom-color-light-hover: var(--custom-color-dark-hover);
 }
 
+/* Eyeweb
 
-/*
   4. Global Styles:
   Apply your global font family and bind body colors to the CSS variables.
 */
