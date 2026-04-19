@@ -5,41 +5,50 @@ import Link from 'next/link';
 import { useTheme } from '../contexts/ThemeContext';
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid';
 
-// Function to fetch categories (client-side)
+const MEGA_MENU_FAIL_KEY = 'megaMenuLastFail';
+const RETRY_COOLDOWN_MS = 5 * 60 * 1000; // 5 minutes
+
+
+async function safeFetch(url, timeout = 8000) {
+    const controller = new AbortController();
+    const id = setTimeout(() => controller.abort(), timeout);
+
+    try {
+        const res = await fetch(url, { signal: controller.signal });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return await res.json();
+    } finally {
+        clearTimeout(id);
+    }
+}
 async function getCategories() {
     try {
-        const res = await fetch("https://api.eyewebmaster.com/api/categories/");
-        if (!res.ok) throw new Error(`Failed to fetch categories: ${res.status}`);
-        const data = await res.json();
-        // Extract 'results' and map 'name' to 'title' for consistency with frontend
-        const formattedCategories = Array.isArray(data.results)
+        const data = await safeFetch("https://api.eyewebmaster.com/api/categories/");
+        return Array.isArray(data.results)
             ? data.results.map(cat => ({
                 id: cat.id,
-                title: cat.name, // Map 'name' from API to 'title' for consistency
+                title: cat.name,
                 slug: cat.slug,
-                description: cat.description // Include other properties if needed
+                description: cat.description
             }))
             : [];
-        return formattedCategories;
     } catch (error) {
-        console.error("Error fetching categories for mega menu:", error);
-        return []; // Ensure an empty array is returned on error
+        console.error("Categories fetch failed:", error);
+        throw error;
     }
 }
 
-// Function to fetch posts (client-side)
 async function getPosts() {
     try {
-        const res = await fetch("https://api.eyewebmaster.com/api/posts/");
-        if (!res.ok) throw new Error(`Failed to fetch posts: ${res.status}`);
-        const data = await res.json();
-        // Extract the 'results' array from the API response
+        const data = await safeFetch("https://api.eyewebmaster.com/api/posts/");
         return Array.isArray(data.results) ? data.results : [];
     } catch (error) {
-        console.error("Error fetching posts for mega menu:", error);
-        return []; // Ensure an empty array is returned on error
+        console.error("Posts fetch failed:", error);
+        throw error;
     }
 }
+
+
 
 export default function BlogMegaMenu() {
     const { isDarkMode } = useTheme();

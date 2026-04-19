@@ -66,7 +66,7 @@ const Navbar = () => {
                     <li><Link className={navItemClasses} href="/#Services">Services</Link></li>
                     <li><Link className={navItemClasses} href="/#Work">Work</Link></li>
                     <li><Link className={navItemClasses} href="/training">Training</Link></li>
-                    <BlogMegaMenu />
+                    
                 </ul>
 
                 <div className='flex items-center gap-0'>
