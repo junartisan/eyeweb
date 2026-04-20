@@ -1,7 +1,7 @@
 // app/page.jsx
 "use client"; // Keep this, as it renders other client components and might have client-side JS
 import React from 'react'; // <--- Ensure React is imported
-import Image from "next/image";
+//import Image from "next/image";
 import Header from "./components/Header";
 // import Navbar from "./components/Navbar"; // Navbar is now rendered in ClientLayoutWrapper
 import About from "./components/About";

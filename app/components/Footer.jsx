@@ -2,8 +2,8 @@
 import Image from 'next/image';
 import React from 'react';
 import { assets } from '../../assets/assets';
-import DarkModeToggle from '../contexts/DarkModeToggle'; 
-import { useTheme } from '../contexts/ThemeContext'; 
+//import DarkModeToggle from '../contexts/DarkModeToggle'; 
+//import { useTheme } from '../contexts/ThemeContext'; 
 
 const Footer = () => {
   return (
