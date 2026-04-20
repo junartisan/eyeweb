@@ -3,6 +3,7 @@ import React from 'react'; // <--- Ensure React is imported
 import Training from "./components/Training"; // This is your main Training content component
 import Training_Content from './components/WebAppTraining';
 import GraphicsAdsMarketing from './components/GraphicsAdsMarketing';
+import Footer from '../components/Footer';
 
 export const metadata = {
   title: "Cebu Web Developer Trainings for Website and Apps",
@@ -16,6 +17,7 @@ export default function TrainingPage() {
       <Training/>
       <Training_Content />
       <GraphicsAdsMarketing />
+      <Footer />
     
     </div>
   );

@@ -15,17 +15,7 @@ const Footer = () => {
             eyewebmaster@gmail.com
         </div>
       </div>
-      <div className='flex mx-auto text-center'>
-        <div className='w-3xs flex items-center gap-2 mx-auto'>
-          Hello World
-        </div>
-        <div className='w-2xs flex items-center gap-2 mx-auto'>
-          Hello World
-        </div>
-        <div className='w-2xl flex items-center gap-2 mx-auto'>
-          Hello World
-        </div>
-      </div>
+      
       <div className='text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6'>
         <p className='items-center'>&copy; 2025. All Rights Reserve</p>
         <ul className='flex items-center gap-10 justify-center mt-4 sm:mt-0'>

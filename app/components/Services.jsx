@@ -3,7 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import { assets } from '../../assets/assets';
 import { serviceData } from '../../assets/assets';
-import DarkModeToggle from '../contexts/DarkModeToggle'; // Assuming this path is correct
+//import DarkModeToggle from '../contexts/DarkModeToggle'; // Assuming this path is correct
 import { useTheme } from '../contexts/ThemeContext'; // <--- IMPORT THE USETHEME HOOK
 import { motion } from "framer-motion";
 
