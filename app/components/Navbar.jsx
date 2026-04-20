@@ -61,7 +61,7 @@ const Navbar = () => {
                 </Link>
 
                 {/* Desktop Menu */}
-                <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50 dark:bg-gray-800"}`} >
+                <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 text-xl ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50 dark:bg-gray-800"}`} >
                     <li><Link className={navItemClasses} href="/#About">About</Link></li>
                     <li><Link className={navItemClasses} href="/#Services">Services</Link></li>
                     <li><Link className={navItemClasses} href="/#Work">Work</Link></li>

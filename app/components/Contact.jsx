@@ -36,7 +36,7 @@ const Contact = () => {
 
   return (
     <div id='contact' className='w-full px=[12%] py-10 scroll-mt-20 bg-[url("/footer-bg-color.png")] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-none'>
-      <h4 className='text-center mb-2 text-lg font-Ovo'> 
+      <h4 className='text-center mb-2 font-Ovo text-2xl'> 
             Connect with us
         </h4>
         <motion.div
@@ -45,7 +45,7 @@ const Contact = () => {
         <h2 className='text-center text-5xl font-Ovo'>
             Get in Touch
         </h2>
-        <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>
+        <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo text-lg'>
         We love to hear from you! If you have any questions, comments, or feedback, please use the form below.
         </p>
         </motion.div>
@@ -80,7 +80,7 @@ const Contact = () => {
         <button
             type="submit"
             aria-label='Submit Now'
-            className="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/70 text-white rounded-full mx-auto hover:bg-black duration-500 dark:hover:bg-white/50"
+            className="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/70 text-white rounded-full mx-auto hover:bg-black duration-500 dark:hover:bg-white/50 text-lg"
         >
             Submit now <Image src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_white} alt="button" className="w-4"  />
         </button>

@@ -10,13 +10,13 @@ const Work = () => {
     const {isDarkMode} = useTheme();
   return (
     <div id='Work' className='w-full px=[12%] py-10 scroll-mt-20'>
-        <h4 className='text-center mb-2 text-lg font-Ovo'> 
+        <h4 className='text-center mb-2 font-Ovo text-2xl'> 
             Our Porfolio
         </h4>
         <h2 className='text-center text-5xl font-Ovo'>
             Our Latest Work
         </h2>
-        <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>
+        <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo text-lg'>
         Showing you some of our app development porfolio! Explore the collection of projects showcasing our expertise in app, web and front-end development. 
         </p>
         <div className='grid grid-cols-auto my-10 gap-5 p-1'>
