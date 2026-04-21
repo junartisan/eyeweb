@@ -18,7 +18,7 @@ const Training_Content = () => {
         <motion.div initial={{scale: .8}} whileInView = {{scale: 1}} transition = {{duration: 1, type: 'string'}}>
  
         <h2 className='text-center text-5xl font-Ovo'>Web App Trainings</h2>
-        <p className='pt-5 text-justify'>
+        <p className='pt-5 text-justify text-lg'>
             Our Web App Training Program is designed to equip aspiring developers, professionals, and teams with the skills needed to build powerful, scalable, and modern web applications. Whether you're starting from scratch or looking to enhance your current skills, this training provides a hands-on, project-based learning experience.
         </p>
         <div className='grid grid-cols-1  gap-6 my-10'>
@@ -42,9 +42,11 @@ const Training_Content = () => {
                     <li>Follow best practices in security, performance, and scalability.</li>
 
                  </ul>
-                 <a href='#' className='flex items-center gap-2 text-sm mt-5'>
+                 <div className='w-70 '>
+                 <a href='#' className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2  hover:-translate-y-1 duration-500 hover:shadow-2xs dark:border-white dark: hover:shadow-white  dark:bg-pink-900 bg-pink-200 justify-center mt-5'>
                      Join Now <Image src={assets.right_arrow} className='w-4' alt=''/> 
                  </a>
+                 </div>
                  
              </div>
          

@@ -28,7 +28,7 @@ const Services = () => {
                 <p className='text-lg text-gray-600 leading-5 dark:text-white/80'>
                     {description}
                 </p>
-                <a href={link} className='flex items-center gap-2 text-sm mt-5'>
+                <a href={link} className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2  hover:-translate-y-1 duration-500 hover:shadow-2xs dark:border-white dark: hover:shadow-white  dark:bg-pink-900 bg-pink-200 justify-center mt-5'>
                     <div className='text-lg'>Readmore</div> <Image src={assets.right_arrow} className='w-4' alt='arrow'/> 
                 </a>
             </div>

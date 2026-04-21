@@ -19,7 +19,7 @@ const Training = () => {
         <motion.div initial={{scale: .8}} whileInView = {{scale: 1}} transition = {{duration: 1, type: 'string'}}>
  
         <h2 className='text-center text-5xl font-Ovo'>Our Trainings</h2>
-        <p className='pt-5 text-justify'>
+        <p className='pt-5 text-justify text-lg'>
          Events and trainings are the start of creativity and growth. With our staff and specialist they can show you the best version to take when dealing with technology and securities. 
         </p>
         <div className='grid grid-cols-auto gap-6 my-10'>
@@ -31,9 +31,11 @@ const Training = () => {
                  <p className='text-sm text-gray-600 leading-5 dark:text-white/80'>
                      {description}
                  </p>
-                 <a href={link} className='flex items-center gap-2 text-sm mt-5'>
+                 <div className='w-70 '>
+                 <a href={link} className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2  hover:-translate-y-1 duration-500 hover:shadow-2xs dark:border-white dark: hover:shadow-white  dark:bg-pink-900 bg-pink-200 justify-center mt-5'>
                      Readmore <Image src={assets.right_arrow} className='w-4' alt=''/> 
                  </a>
+                 </div>
                  
              </div>
          )) }

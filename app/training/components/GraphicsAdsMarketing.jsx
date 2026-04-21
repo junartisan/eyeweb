@@ -9,7 +9,7 @@ const GraphicsAdsMarketing = () => {
     const { isDarkMode } = useTheme(); // Call the hook to get the value
 
     // Use isDarkMode to apply conditional styling
-    const divBgClass = isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-800';
+    //const divBgClass = isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-800';
 
     return (
         <div id="GraphAdsMarketing" className='w-full px-[12%] py-10 scroll-mt-10'>
@@ -17,11 +17,11 @@ const GraphicsAdsMarketing = () => {
         <motion.div initial={{scale: .8}} whileInView = {{scale: 1}} transition = {{duration: 1, type: 'string'}}>
  
         <h2 className='text-center text-5xl font-Ovo'>Graphics and Ads Marketing</h2>
-        <p className='pt-5 text-justify'>
+        <p className='pt-5 text-justify text-lg'>
             Our Graphics and Ads Marketing Program is designed to equip aspiring developers, professionals, and teams with the skills needed to build powerful, scalable, and modern web applications. Whether you're starting from scratch or looking to enhance your current skills, this training provides a hands-on, project-based learning experience.
         </p>
         <div className='grid grid-cols-1  gap-6 my-10'>
-             <div className='border border-gray-400 rounded-lg px-8 py-5 hover:shadow-black cursor-pointer hover:bg-light-hover hover:-translate-y-1 duration-500 dark: hover:bg-darkHover dark: hover: shadow-white'>
+             <div className='border border-gray-400 rounded-lg px-8 py-5 hover:shadow-black cursor-pointer duration-500 dark: hover:bg-darkHover dark: hover: shadow-white'>
                  
                  <h3 id='#WebAppTraining' className='text-lg my-4 text-gray-700 dark:text-white' >Graphics and Ads Marketing Training</h3>
                  <b>Build the Future, One Web App at a Time</b>
@@ -46,9 +46,11 @@ const GraphicsAdsMarketing = () => {
                     <li>Marketing professionals and social media managers</li>
                     <li>Content creators and influencers</li>
                  </ul>
-                 <a href='#' className='flex items-center gap-2 text-sm mt-5'>
-                     Join Now <Image src={assets.right_arrow} className='w-4' alt=''/> 
-                 </a>
+                 <div className='w-70 '>
+                    <a href='#' className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2  hover:-translate-y-1 duration-500 hover:shadow-2xs dark:border-white dark: hover:shadow-white  dark:bg-pink-900 bg-pink-200 justify-center mt-5'>
+                         Join Now <Image src={assets.right_arrow} className='w-4' alt=''/> 
+                    </a>
+                 </div>
                  
              </div>
          

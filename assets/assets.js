@@ -106,15 +106,15 @@ export const workData = [
 export const serviceData = [
     { icon: assets.web_icon, title: 'Software Development', description: 'Software development is the process of planning, designing, programming...', link: '' },
     { icon: assets.mobile_icon, title: 'Web & Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience and opportunities...', link: '' },
+    { icon: assets.graphics_icon, title: 'Trainings', description: 'Proper training and updates enhance technology capabilities will lift economy...', link: 'training' },
 ];
 
 export const trainingData = [
-    { icon: assets.web_icon, title: 'Web App Training', description: 'Learn to design, build, and deploy modern web applications with practical training...', link: '#WebAppTraining' },
+    { icon: assets.web_icon, title: 'Web App Training', description: 'Learn to design, build, and deploy modern web applications with practical training and practices...', link: '#WebAppTraining' },
     { icon: assets.mobile_icon, title: 'Web & Mobile App Meetup', description: 'Connect with fellow web and mobile developers, designers, and tech enthusiasts in a collaborative meetup... ', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX Designers Gathering', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics and Ads Marketing', description: 'Creative design solutions to enhance visual communication...', link: '#GraphAdsMarketing' },
+    { icon: assets.ui_icon, title: 'UI/UX Designers Gathering', description: 'UI/UX design focuses on creating a seamless user experience and improve sales productivity...', link: '' },
+    { icon: assets.graphics_icon, title: 'Graphics and Ads Marketing', description: 'Creative and planed design solutions to enhance visual communication, marketing, and sales...', link: '#GraphAdsMarketing' },
 ];
 
 export const infoList = [
