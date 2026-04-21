@@ -1,6 +1,9 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  // If you are deploying as a Static Site on Render, uncomment the line below:
+  // output: 'export', 
+  
   images: {
     remotePatterns: [
       {
@@ -14,7 +17,7 @@ const nextConfig: NextConfig = {
         hostname: 'api.eyewebmaster.com',
       },
       {
-        protocol: 'http', // Allow old http images too
+        protocol: 'http',
         hostname: 'www.eyewebmaster.com',
         pathname: '/**',
       },    
@@ -26,5 +29,5 @@ const nextConfig: NextConfig = {
     ],
   },
 };
-module.exports = nextConfig;
+
 export default nextConfig;
