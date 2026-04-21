@@ -1,10 +1,9 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  // If you are deploying as a Static Site on Render, uncomment the line below:
-  // output: 'export', 
-  
+  output: 'export', // CRITICAL: This creates the 'out' folder for static hosting
   images: {
+    unoptimized: true, // REQUIRED for static export if using next/image
     remotePatterns: [
       {
         protocol: 'https',
