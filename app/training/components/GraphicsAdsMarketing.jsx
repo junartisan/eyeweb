@@ -18,12 +18,12 @@ const GraphicsAdsMarketing = () => {
  
         <h2 className='text-center text-5xl font-Ovo'>Graphics and Ads Marketing</h2>
         <p className='pt-5 text-justify'>
-            Our Web App Training Program is designed to equip aspiring developers, professionals, and teams with the skills needed to build powerful, scalable, and modern web applications. Whether you're starting from scratch or looking to enhance your current skills, this training provides a hands-on, project-based learning experience.
+            Our Graphics and Ads Marketing Program is designed to equip aspiring developers, professionals, and teams with the skills needed to build powerful, scalable, and modern web applications. Whether you're starting from scratch or looking to enhance your current skills, this training provides a hands-on, project-based learning experience.
         </p>
         <div className='grid grid-cols-1  gap-6 my-10'>
              <div className='border border-gray-400 rounded-lg px-8 py-5 hover:shadow-black cursor-pointer hover:bg-light-hover hover:-translate-y-1 duration-500 dark: hover:bg-darkHover dark: hover: shadow-white'>
                  
-                 <h3 id='#WebAppTraining' className='text-lg my-4 text-gray-700 dark:text-white' >Web App Development Training</h3>
+                 <h3 id='#WebAppTraining' className='text-lg my-4 text-gray-700 dark:text-white' >Graphics and Ads Marketing Training</h3>
                  <b>Build the Future, One Web App at a Time</b>
                  <p className='text-m text-gray-600 leading-5 dark:text-white/80'>
                  Learn how to design compelling visuals and create marketing campaigns that drive engagement, brand recognition, and sales. This training is tailored for aspiring graphic designers, social media managers, business owners, and marketers who want to master the art and science of visual marketing.

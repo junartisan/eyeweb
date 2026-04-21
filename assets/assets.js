@@ -5,6 +5,8 @@ import edu_icon from './edu-icon.png';
 import edu_icon_dark from './edu-icon-dark.png';
 import project_icon from './project-icon.png';
 import project_icon_dark from './project-icon-dark.png';
+import training_icon_dark from './project-icon-dark.png';
+import training_icon from './project-icon.png';
 import vscode from './vscode.png';
 import firebase from './firebase.png';
 import figma from './figma.png';
@@ -44,6 +46,8 @@ export const assets = {
     edu_icon_dark,
     project_icon,
     project_icon_dark,
+    training_icon_dark,
+    training_icon,
     vscode,
     firebase,
     figma,
@@ -101,22 +105,23 @@ export const workData = [
 
 export const serviceData = [
     { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
+    { icon: assets.mobile_icon, title: 'Web & Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
     { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
     { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
 ];
 
 export const trainingData = [
     { icon: assets.web_icon, title: 'Web App Training', description: 'Learn to design, build, and deploy modern web applications with practical training...', link: '#WebAppTraining' },
-    { icon: assets.mobile_icon, title: 'Mobile App Meetup', description: 'Connect with fellow mobile developers, designers, and tech enthusiasts in a collaborative meetup... ', link: '' },
+    { icon: assets.mobile_icon, title: 'Web & Mobile App Meetup', description: 'Connect with fellow web and mobile developers, designers, and tech enthusiasts in a collaborative meetup... ', link: '' },
     { icon: assets.ui_icon, title: 'UI/UX Designers Gathering', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
     { icon: assets.graphics_icon, title: 'Graphics and Ads Marketing', description: 'Creative design solutions to enhance visual communication...', link: '#GraphAdsMarketing' },
 ];
 
 export const infoList = [
     { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Expertise', description: 'Linux Server, Python, React, Nodejs, Tailwind, Bootstrap, Wordpress' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects and building more...' }
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Expertise', description: 'Linux Server, Python, React, Nodejs, Tailwind, Bootstrap' },
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects and building more...' },
+    { icon: assets.training_icon, iconDark: assets.training_icon_dark, title: 'Trainings', description: 'Being part of the training keeps you align with your visions..'}
 ];
 
 export const toolsData = [

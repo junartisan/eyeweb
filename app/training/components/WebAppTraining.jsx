@@ -35,7 +35,7 @@ const Training_Content = () => {
                     <li>Understand the core principles of web application architecture.</li>
                     <li>Build full-stack web applications using modern tools and frameworks.</li>
                     <li>Master front-end technologies (HTML5, CSS3, JavaScript, React or Vue).</li>
-                    <li>Develop and integrate RESTful APIs using Django or Node.js.</li>
+                    <li>Develop and integrate RESTful APIs using FastAPI, Django or Node.js.</li>
                     <li>Manage databases with PostgreSQL or MongoDB.</li>
                     <li>Deploy web apps to cloud platforms (Vercel, Heroku, DigitalOcean, etc.).</li>
                     <li>Implement version control and team collaboration via Git and GitHub.</li>

@@ -9,7 +9,6 @@ import { useTheme } from '../contexts/ThemeContext'; // <--- IMPORT THE USETHEME
 import { motion } from "framer-motion";
 
 
-
 const Header = () => {
     const {isDarkMode} = useTheme();
   return (
@@ -26,8 +25,8 @@ const Header = () => {
             "With years of experience in design and web application development, we combine expertise and creativity to help shape your future in today’s fast-moving digital world."
             </p>
       <div className='flex flex-col sm:flex-row item-center gap-4 mt-4'>
-          <a href="#contact" className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2  hover:-translate-y-1 duration-500 hover:shadow-2xs dark:border-white dark: hover:shadow-white  dark:bg-pink-950 bg-pink-200'>Contact Us  <Image src={isDarkMode ? assets.right_arrow_white : assets.right_arrow_bold} alt='' className='w-4' /> </a>
-          <a href="#Work" className='items-center justify-center px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2  hover:-translate-y-1 duration-500 hover:shadow-2xs dark:border-white dark: hover:shadow-white  dark:bg-pink-950 bg-pink-200 '>Works <Image src={isDarkMode ? assets.right_arrow_white : assets.right_arrow_bold } alt='' className='w-4' /></a>   
+          <a href="#contact" className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2  hover:-translate-y-1 duration-500 hover:shadow-2xs dark:border-white dark: hover:shadow-white  dark:bg-pink-900 bg-pink-200'>Contact Us  <Image src={isDarkMode ? assets.right_arrow_white : assets.right_arrow_bold} alt='' className='w-4' /> </a>
+          <a href="#Work" className='items-center justify-center px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2  hover:-translate-y-1 duration-500 hover:shadow-2xs dark:border-white dark: hover:shadow-white  dark:bg-pink-900 bg-pink-200 '>Works <Image src={isDarkMode ? assets.right_arrow_white : assets.right_arrow_bold } alt='' className='w-4' /></a>   
       </div>
     </div>
   )
