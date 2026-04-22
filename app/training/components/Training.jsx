@@ -13,7 +13,7 @@ const Training = () => {
     const divBgClass = isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-800';
 
     return (
-        <div id="Training" className='w-full px-[12%] py-10 scroll-mt-20'>
+    <div id="Training" className='w-full px-[12%] py-10 scroll-mt-20'>
         <h4 className='text-center mb-2 text-lg font-Ovo mt-15'>Our professional team are sharing their individual talents. </h4>
  
         <motion.div initial={{scale: .8}} whileInView = {{scale: 1}} transition = {{duration: 1, type: 'string'}}>
@@ -31,9 +31,9 @@ const Training = () => {
                  <p className='text-sm text-gray-600 leading-5 dark:text-white/80'>
                      {description}
                  </p>
-                 <div className='w-70 '>
-                 <a href={link} className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2  hover:-translate-y-1 duration-500 hover:shadow-2xs dark:border-white dark: hover:shadow-white  dark:bg-pink-900 bg-pink-200 justify-center mt-5'>
-                     Readmore <Image src={assets.right_arrow} className='w-4' alt=''/> 
+                 <div className='w-auto max-w-60 '>
+                 <a href={link} className='px-3 py-3 border rounded-full border-gray-500 flex items-center gap-2  hover:-translate-y-1 duration-500 hover:shadow-2xs dark:border-white dark: hover:shadow-white  dark:bg-pink-900 bg-pink-200 justify-center mt-5'>
+                     See more details <Image src={assets.right_arrow} className='w-4' alt=''/> 
                  </a>
                  </div>
                  

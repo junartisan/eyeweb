@@ -42,7 +42,7 @@ const Training_Content = () => {
                     <li>Follow best practices in security, performance, and scalability.</li>
 
                  </ul>
-                 <div className='w-70 '>
+                 <div className='w-auto max-w-100 '>
                  <a href='#' className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2  hover:-translate-y-1 duration-500 hover:shadow-2xs dark:border-white dark: hover:shadow-white  dark:bg-pink-900 bg-pink-200 justify-center mt-5'>
                      Join Now <Image src={assets.right_arrow} className='w-4' alt=''/> 
                  </a>

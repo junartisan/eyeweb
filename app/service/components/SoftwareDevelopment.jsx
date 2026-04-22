@@ -9,7 +9,7 @@ const SoftwareDevelopment = () => {
     const {isDarkMode} = useTheme ();
     
     return (
-        <div>
+        <div id="softdev" className="w-full px-[12%] py-20 scroll-mt-20">
             <h1>Software Development</h1>
         </div>
     );

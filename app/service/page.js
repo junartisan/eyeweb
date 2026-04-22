@@ -1,6 +1,6 @@
 import Reac from 'react';
 import SoftwareDevelopment from './components/SoftwareDevelopment';
-
+import Footer from '../components/Footer';
 export const metadata= {
     title: 'Eyewebmaster Programming Services',
     description: 'Full Stack Outsource Programming Services in the Philippines - BYU graduates with certificated for full stack development certificates.',
@@ -9,6 +9,7 @@ export default function ServicesPage() {
     return (
         <div>
             <SoftwareDevelopment/>
+            <Footer />
         </div>
     );
 
