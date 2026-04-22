@@ -85,28 +85,32 @@ export const workData = [
         title: 'Frontend project',
         description: 'Web Design',
         bgImage: '/work-1.png',
+        link: '/portfolio',
     },
     {
         title: 'Geo based app',
         description: 'Mobile App',
         bgImage: '/work-2.png',
+        link: '/portfolio',
     },
     {
         title: 'Photography site',
         description: 'Web Design',
         bgImage: '/work-3.png',
+        link: '/portfolio',
     },
     {
         title: 'UI/UX designing',
         description: 'UI/UX Design',
         bgImage: '/work-4.png',
+        link: '/portfolio',
     },
 ];
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Software Development', description: 'Software development is the process of planning, designing, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Web & Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience and opportunities...', link: '' },
+    { icon: assets.web_icon, title: 'Software Development', description: 'Software development is the process of planning, designing, programming...', link: '/service' },
+    { icon: assets.mobile_icon, title: 'Web & Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '/service' },
+    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience and opportunities...', link: '/service' },
     { icon: assets.graphics_icon, title: 'Trainings', description: 'Proper training and updates enhance technology capabilities will lift economy...', link: 'training' },
 ];
 

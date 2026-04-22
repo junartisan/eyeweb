@@ -1,19 +1,17 @@
 import React from 'react'; // Fixed typo: Reac -> React
-import SoftwareDevelopment from './components/SoftwareDevelopment';
-import InquiryForm from './components/InquiryForm';
-
+import ProjectGallery from './components/ProjectGallery';
 import Footer from '../components/Footer';
 
+
 export const metadata = {
-    title: 'Services & Inquiries | Eyewebmaster Programming Services',
+    title: 'Eyewebmaster Portfolio Gallery',
     description: 'Expert Full Stack Outsource Programming Services in the Philippines. Inquire today for custom web and software development solutions.',
 };
 
-export default function ServicesPage() {
+export default function PortfolioPage() {
     return (
         <div>
-            
-            <InquiryForm />
+            <ProjectGallery />
             <Footer />
         </div>
     );

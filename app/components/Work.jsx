@@ -6,6 +6,7 @@ import { workData, assets, serviceData } from '../../assets/assets';
 import { useTheme } from '../contexts/ThemeContext'; 
 
 
+
 const Work = () => {
     const {isDarkMode} = useTheme();
   return (
@@ -27,15 +28,15 @@ const Work = () => {
                             <h2 className='font-semibold '>{project.title}</h2>
                             <p className='text-sm text-gray-700'>{project.description}</p>
                         </div>
-                        <div className='border rounded-full border-black w-9 aspect-squre flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition'> 
+                        <a href={project.link} className='border rounded-full border-black w-9 aspect-squre flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition'> 
                             <Image src={assets.send_icon} alt='' className='w-5'/>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
         ))}
         </div>
-        <a href="" className='w-max flex item-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-light-hover duration-500 dark:border-white dark:text-white'>
+        <a href="/portfolio" className='w-max flex item-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-light-hover duration-500 dark:border-white dark:text-white'>
             Show more <Image src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold} alt='right arrow' className='w-6 h-5 mt-2' />
         </a>
     </div>
