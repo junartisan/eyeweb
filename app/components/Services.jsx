@@ -13,7 +13,7 @@ const Services = () => {
     <div id="Services" className='w-full px-[12%] py-10 scroll-mt-20 '>
        <h4 className='text-center mb-2 text-2xl font-Ovo'>What we Offer</h4>
 
-       <motion.div initial={{scale: 0}} whileInView = {{scale: 1}} transition = {{duration: 0.8, type: 'string'}}>
+       <motion.div initial={{scale: .7}} whileInView = {{scale: 1}} transition = {{duration: 0.8, type: 'string'}}>
 
        <h2 className='text-center text-5xl font-Ovo'>Our Services</h2>
        <p className='text-lg'>

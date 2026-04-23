@@ -51,9 +51,15 @@ const Navbar = () => {
     return (
         <>
             {/* Background image conditional on dark mode */}
-            <div className='fixed top-0 right-0 -z-10 translate-y-[-20%]  '>
-                {!isDarkMode && <Image src={assets.header_bg_color} alt='Background Light' className='w-full' />}
-            </div>
+            <div className='fixed inset-0 -z-10'>
+                {!isDarkMode && (
+                 <Image 
+            src={assets.header_bg_color} 
+            alt='Background Light' 
+            className='w-full h-full object-cover opacity-50' // object-cover prevents stretching
+        />
+    )}
+</div>
 
             <nav className={`w-full fixed px-5 lg:px-4 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-gray-800" : ""}`} >
                 <Link href="/">
