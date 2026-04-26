@@ -109,7 +109,7 @@ const ProjectGallery = () => {
                 <motion.a 
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    href='#inquiry' 
+                    href='service' 
                     className='px-10 py-4 border rounded-full border-gray-500 flex items-center gap-2 hover:shadow-2xs dark:border-white dark:bg-pink-900 bg-pink-200 font-Ovo text-lg'
                 >
                     Start Your Project <Image src={assets.right_arrow} className='w-4' alt=''/>

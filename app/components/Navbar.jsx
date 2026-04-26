@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { assets } from '../../assets/assets';
 import DarkModeToggle from '../contexts/DarkModeToggle';
 import { useTheme } from '../contexts/ThemeContext';
-import BlogMegaMenu from './BlogMegaMenu';
+//import BlogMegaMenu from './BlogMegaMenu';
 
 const Navbar = () => {
     const [isScroll, setIsScroll] = useState(false);
@@ -61,7 +61,7 @@ const Navbar = () => {
     )}
 </div>
 
-            <nav className={`w-full fixed px-5 lg:px-4 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-gray-800" : ""}`} >
+<nav className={`w-full fixed h-20 px-5 lg:px-4 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-gray-800" : ""}`} >
                 <Link href="/">
                     <Image src={assets.logo} alt="Eyewebmaster Logo" className='w-55 cursor-pointer' />
                 </Link>
