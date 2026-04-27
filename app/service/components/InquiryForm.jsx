@@ -20,6 +20,7 @@ const InquiryForm = () => {
         const data = {
             name: formData.get('name'),
             company: formData.get('company'),
+            email: formData.get('email'),
             projectType: formData.get('projectType'),
             budget: formData.get('budget'),
             timeline: formData.get('timeline'),
@@ -96,6 +97,10 @@ const InquiryForm = () => {
                             <div className='flex flex-col gap-2'>
                                 <label className='text-sm font-semibold'>Company Name</label>
                                 <input name="company" type="text" placeholder="Eyewebmaster" className='p-3 bg-transparent border border-gray-400 rounded-md outline-none focus:border-pink-500 transition-colors' />
+                            </div>
+                            <div className='flex flex-col gap-2'>
+                                <label className='text-sm font-semibold'>Email Address</label>
+                                <input name="email" required type="email" placeholder="your@email.com" className='p-3 bg-transparent border border-gray-400 rounded-md outline-none focus:border-pink-500 transition-colors' />
                             </div>
                             <div className='flex flex-col gap-2'>
                                 <label className='text-sm font-semibold'>Project Type</label>
