@@ -20,7 +20,7 @@ const About = () => {
         <div className='w-64 sm:w-80 lg:w-max rounded-3xl mx-auto mb-10 lg:mb-0'>
           <motion.div 
             initial={{ opacity: 0, scale: 0 }} 
-            whileInView={{ opacity: 1, scale: .8 }} 
+            whileInView={{ opacity: 1, scale: .9 }} 
             transition={{ duration: 0.8, type: 'spring' }}
           >
             <Image 
