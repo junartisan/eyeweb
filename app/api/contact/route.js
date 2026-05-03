@@ -3,32 +3,37 @@ import nodemailer from 'nodemailer';
 
 export async function POST(req) {
     try {
-        // 1. Parse the incoming request body
         const body = await req.json();
         
         const { 
-            name, email, message,                                     // Basic Contact
-            company, projectType, budget, timeline, details, service  // Service Inquiry
+            name, email, message,
+            company, projectType, budget, timeline, details, service 
         } = body;
 
-        // 2. Setup the SMTP Transporter
-        // Using variables from your .env.local file
+        // 1. IMPROVED TRANSPORTER CONFIGURATION
         const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST,
             port: parseInt(process.env.SMTP_PORT || "587"),
-            secure: process.env.SMTP_PORT === "587", // Use SSL for port 465, TLS for others
+            // Render/Cloud hosts prefer port 587 with secure: false (it uses STARTTLS)
+            secure: process.env.SMTP_PORT === "465", 
             auth: {
                 user: process.env.SMTP_USER,
                 pass: process.env.SMTP_PASS,
             },
+            // CRITICAL FOR CLOUD HOSTS: Bypass self-signed certificate issues 
+            // and force the connection to wait for a handshake.
+            tls: {
+                rejectUnauthorized: false,
+                minVersion: "TLSv1.2"
+            },
+            connectionTimeout: 10000, // 10 seconds timeout
         });
 
-        // 3. Determine which form template to use
+        // 2. Logic to Determine Email Content (Remains same as your working logic)
         let emailSubject = "";
         let emailHtml = "";
 
         if (service) {
-            // Template for Service Inquiry (from InquiryForm)
             emailSubject = `🚀 Project: ${service} - ${name}`;
             emailHtml = `
                 <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; border: 1px solid #6366f1; padding: 20px; border-radius: 10px;">
@@ -42,13 +47,11 @@ export async function POST(req) {
                     <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;" />
                     <p><strong>Project Details:</strong></p>
                     <div style="background: #f4f4f9; padding: 15px; border-radius: 5px; border-left: 4px solid #6366f1;">
-                        ${details.replace(/\n/g, '<br/>')}
+                        ${(details || "").replace(/\n/g, '<br/>')}
                     </div>
-                    <p style="font-size: 12px; color: #888; margin-top: 20px;">Sent from Eyewebmaster Portfolio</p>
                 </div>
             `;
         } else {
-            // Template for General Contact (from Contact component)
             emailSubject = `✉️ General Message: ${name}`;
             emailHtml = `
                 <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; border: 1px solid #db2777; padding: 20px; border-radius: 10px;">
@@ -58,18 +61,17 @@ export async function POST(req) {
                     <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;" />
                     <p><strong>Message Content:</strong></p>
                     <div style="background: #fff5f7; padding: 15px; border-radius: 5px; border-left: 4px solid #db2777;">
-                        ${message.replace(/\n/g, '<br/>')}
+                        ${(message || "").replace(/\n/g, '<br/>')}
                     </div>
-                    <p style="font-size: 12px; color: #888; margin-top: 20px;">Sent from Eyewebmaster Portfolio</p>
                 </div>
             `;
         }
 
-        // 4. Send the email
+        // 3. SEND THE EMAIL
         await transporter.sendMail({
             from: `"${name}" <${process.env.SMTP_USER}>`, 
             to: process.env.RECEIVER_EMAIL,
-            replyTo: email || process.env.SMTP_USER, // Allows you to reply directly to the sender
+            replyTo: email || process.env.SMTP_USER, 
             subject: emailSubject,
             html: emailHtml,
         });
@@ -77,9 +79,16 @@ export async function POST(req) {
         return NextResponse.json({ message: "Email sent successfully" }, { status: 200 });
 
     } catch (error) {
-        console.error("Critical SMTP Error:", error);
+        // Detailed logging for Render logs
+        console.error("SMTP Error Details:", {
+            code: error.code,
+            command: error.command,
+            response: error.response,
+            stack: error.stack
+        });
+
         return NextResponse.json(
-            { message: "Failed to process request", error: error.message }, 
+            { message: "Failed to send email", error: error.message }, 
             { status: 500 }
         );
     }
